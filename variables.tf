@@ -20,5 +20,5 @@ variable "instance_type" {
 
 variable "repo" {
   description = "repositorio da aplicação"
-  default     = "https://www.github.com/thiagorolive/terraform"
+  default     = "https://www.github.com/thiagorolive/vps-reseller"
 }
