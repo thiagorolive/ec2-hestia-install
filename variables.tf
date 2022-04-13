@@ -1,6 +1,6 @@
 variable "region" {
   description = "Defina qual região que a instancia será lançada"
-  default     = "us-west-1"
+  default     = "us-west-1" 
 }
 
 variable "name" {
