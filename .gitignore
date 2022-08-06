@@ -3,3 +3,4 @@
 *.tfstate
 *.hcl
 *.txt
+.cred.txt

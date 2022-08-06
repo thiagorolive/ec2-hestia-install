@@ -30,15 +30,3 @@ resource "aws_security_group_rule" "tcp_port22" {
 
 
 }
-# resource "aws_security_group_rule" "tcp_port8083" {
-#   security_group_id = data.aws_security_group.default.id
-
-#   type             = "ingress"
-#   protocol         = "tcp"
-#   cidr_blocks      = ["0.0.0.0/0"]
-#   ipv6_cidr_blocks = ["::/0"]
-#   from_port        = "8083"
-#   to_port          = "8083"
-
-
-# }

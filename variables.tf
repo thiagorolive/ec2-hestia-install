@@ -1,11 +1,11 @@
 variable "region" {
   description = "Defina qual região que a instancia será lançada"
-  default     = "us-west-1" 
+  default     = "us-west-1"
 }
 
 variable "name" {
   description = "nome da aplicação"
-  default     = "server01"
+  default     = "master-node"
 }
 
 variable "env" {
@@ -18,7 +18,8 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
-variable "repo" {
-  description = "repositorio da aplicação"
-  default     = "https://www.github.com/thiagorolive/vps-reseller"
-}
+
+# variable "repo" {
+#   description = "repositorio da aplicação"
+#   default     = "https://www.github.com/thiagorolive/vps-reseller"
+# }

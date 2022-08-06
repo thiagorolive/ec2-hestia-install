@@ -8,11 +8,14 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"]
 }
 
-
+resource "aws_eip_association" "eip_assoc" {
+  instance_id   = aws_instance.server.id
+  allocation_id = aws_eip.server.id
+}
 resource "aws_instance" "server" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
-  user_data     = file("scripts/bootstrap.sh")
+  user_data     = file("scripts/init_script.sh")
 
   tags = {
     name        = var.name
@@ -21,4 +24,7 @@ resource "aws_instance" "server" {
 
   }
 
+}
+resource "aws_eip" "server" {
+  vpc = true
 }
